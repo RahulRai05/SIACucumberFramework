@@ -48,8 +48,8 @@ public class SSUserProfileTestDef
 
     @When("^Log-In Button is clicked$")
     public void clcik_Login () throws Exception {
-    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("login")));
-    	driver.findElement(By.className("login")).click();
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Log in']")));
+    	driver.findElement(By.xpath("//span[text()='Log in']")).click();
     	driver.findElement(By.className("LoginButtons__emailLogo-1TRsT")).click();
         
     }

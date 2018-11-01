@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature", glue = "sia.cucumber.test", dryRun = false, monochrome = true,
 		plugin={"pretty","html:TestReport/HTML","json:TestReport/JSON/JsonReport.json"}, strict = false,
-		tags = {"~@negative"})
+		tags = {"~@nagative"})
 public class SSTestRunner {
 
 }

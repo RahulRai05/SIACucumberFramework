@@ -15,7 +15,7 @@ formatter.background({
 });
 formatter.step({
   "line": 5,
-  "name": "open \"https://www.skyscanner.com.sg/\" in \"CH\"",
+  "name": "open \"https://www.skyscanner.com.sg/\" in \"IE\"",
   "keyword": "Given "
 });
 formatter.step({
@@ -54,9 +54,16 @@ formatter.match({
       "offset": 6
     },
     {
-      "val": "CH",
+      "val": "IE",
       "offset": 42
     }
   ],
   "location": "SSUserProfileTestDef.open_Url(String,String)"
+});
+formatter.result({
+  "duration": 2774080258,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SSUserProfileTestDef.clcik_Login()"
 });
