@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 		tags = {"~@negative"})
 public class SSTestRunner {
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		try{
 			 JUnitCore.main("sia.cucumber.main.test.SSTestRunner");    
 			}catch(Exception e){
@@ -20,7 +20,7 @@ public class SSTestRunner {
 			}
 
 
-	}
+	}*/
 
 
 }
