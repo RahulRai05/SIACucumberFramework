@@ -24,7 +24,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class SIATestDef 
+public class SSUserProfileTestDef 
     
 {
    
@@ -138,7 +138,8 @@ public class SIATestDef
     
     @When("^Save Traveller is clicked")
     public void save_Traveller() throws Exception{
-    	driver.findElement(By.xpath("//button[contains(@class,SaveButton-3sI_6)]")).click();
+    	driver.findElement(By.xpath("//button[text()='Save traveller']")).click(); 	
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='Delete traveller']")));
     }
     
     @Then("^Verify Added Traveller details \"([^\"]*)\"$")
@@ -157,20 +158,22 @@ public class SIATestDef
     @When("^Delete button is clicked$")
     public void delete_button_is_clicked() throws Exception {
         driver.findElement(By.xpath("//div[@class='DeleteTraveller-3nM8i']/button")).click();
-        driver.findElement(By.xpath("//button[text()='Delete traveller']")).click();
+        driver.findElement(By.xpath("//div[contains(@class,'bpk-modal__content-2wG5a')]/button[2]")).click();
+      
     }
 
     @Then("^Verify Successful deletion of traveller \"([^\"]*)\"$")
     public void successful_Deletion(String delMessage) throws Exception {
-    	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='AsyncActionDialogButton__dialog-content-9bPJs']/span[1]")), delMessage);
-    	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='AsyncActionDialogButton__dialog-content-9bPJs']/span[2]")), "Traveller has now been successfully deleted.");
+    	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[text()='OK']")));
+    	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='AsyncActionDialogButton__dialog-content-9bPJs']/span[1]")).getText(), delMessage);
+    	Assert.assertEquals(driver.findElement(By.xpath("//div[@class='AsyncActionDialogButton__dialog-content-9bPJs']/span[2]")).getText(), "Traveller has now been successfully deleted.");
     	
-    	driver.findElement(By.xpath("//button[contains(@class,'ActionButton-aeA2s')]")).click();
+    	driver.findElement(By.xpath("//button[text()='OK']")).click();
     }
 
 
     
-    @After
+   @After
     public void closeBrowser() {
     	driver.quit();
     }

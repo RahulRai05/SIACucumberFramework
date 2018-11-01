@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "Feature", glue = {"sia.cucumber.test"}, dryRun = false, monochrome = true,
-		plugin={"pretty","html:TestReport/HTML","json:TestReport/JSON/JsonReport.json"}, strict = false)
-public class SIATestRunner {
+		plugin={"pretty","html:TestReport/HTML","json:TestReport/JSON/JsonReport.json"}, strict = false,
+		tags = {"~@negative"})
+public class SSTestRunner {
 
 }
