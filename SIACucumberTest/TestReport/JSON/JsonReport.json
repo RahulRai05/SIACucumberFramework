@@ -1,0 +1,176 @@
+[
+  {
+    "line": 1,
+    "name": "To search and Book flight from SkyScanner Web Portal",
+    "description": "",
+    "id": "to-search-and-book-flight-from-skyscanner-web-portal",
+    "keyword": "Feature",
+    "uri": "SSTest_FlightBooking.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Given Url and user id/Password Login into Skyscanner",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11773238675,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "open \"https://www.skyscanner.com.sg/\" in \"CH\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.skyscanner.com.sg/",
+                  "offset": 6
+                },
+                {
+                  "val": "CH",
+                  "offset": 42
+                }
+              ],
+              "location": "SSUserProfileTestDef.open_Url(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4476874615,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Log-In Button is clicked",
+            "match": {
+              "location": "SSUserProfileTestDef.clcik_Login()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 475870400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"rahulrai0501@gmail.com\" and \"March@2018\" is entered",
+            "match": {
+              "arguments": [
+                {
+                  "val": "rahulrai0501@gmail.com",
+                  "offset": 1
+                },
+                {
+                  "val": "March@2018",
+                  "offset": 30
+                }
+              ],
+              "location": "SSUserProfileTestDef.and_is_entered(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8971434323,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify Login Success Message",
+            "match": {
+              "location": "SSUserProfileTestDef.verify_Login_Success_Message(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Hi there!"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "rahulrai0501@gmail.com"
+                ],
+                "line": 10
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 29,
+        "name": "Logout of Skyscanner",
+        "description": "",
+        "id": "to-test-basic-functionality-of-skyscanner-web-portal;logout-of-skyscanner",
+        "after": [
+          {
+            "result": {
+              "duration": 4877142643,
+              "status": "passed"
+            },
+            "match": {
+              "location": "SSUserProfileTestDef.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3855005684,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Already Logged In",
+            "match": {
+              "location": "SSUserProfileTestDef.already_Logged_In()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 926183428,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Sign Out Button Is clicked",
+            "match": {
+              "location": "SSUserProfileTestDef.click_Logout()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3193439834,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Verify Successful Logout",
+            "match": {
+              "location": "SSUserProfileTestDef.verify_Successful_Logout(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Log in"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "To Test Basic Functionality of Skyscanner Web Portal",
+    "description": "",
+    "id": "to-test-basic-functionality-of-skyscanner-web-portal",
+    "keyword": "Feature",
+    "uri": "SSTest_UserProfile.feature"
+  }
+]

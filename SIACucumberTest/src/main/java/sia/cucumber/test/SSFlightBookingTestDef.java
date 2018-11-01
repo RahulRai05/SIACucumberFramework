@@ -30,10 +30,10 @@ public class SSFlightBookingTestDef {
 	    	Assert.assertEquals(driver.findElement(By.xpath("//span[contains(@class,'Header__greeting-3saCD')]")).getText(), "Verify Hi there!");  /*Verify Hi there! */
 	  }
 	  
-	  @After
+	 /* @After
 	  public void closeBrowser() {
 		 driver.quit();
-	  }
+	  }*/
 	  
 	  @Given("^Open SkyScanner web url \"([^\"]*)\" in browser \"([^\"]*)\"$")
 	    public void open_Url(String url, String browser) throws Exception {

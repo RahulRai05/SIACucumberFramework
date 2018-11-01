@@ -1,6 +1,6 @@
 Feature: To search and Book flight from SkyScanner Web Portal
 
-@withLogin
+@negative
 Scenario Outline:To search flight for different Locations with valid user login
 Given Open SkyScanner web url "https://www.skyscanner.com.sg/" in browser "CH"
 When On "Flight" Booking Tab
